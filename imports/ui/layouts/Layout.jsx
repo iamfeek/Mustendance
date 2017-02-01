@@ -43,7 +43,7 @@ export default class Layout extends React.Component{
           <Navbar />
         </header>
 
-        <main>
+        <main className="container">
           {this.props.content()}
         </main>
       </div>
