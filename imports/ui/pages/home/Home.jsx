@@ -1,4 +1,5 @@
 import React from 'react';
+import AccountsWidget from '/imports/ui/components/accounts/AccountsWidget';
 
 export default class Home extends React.Component{
   constructor(props){
@@ -12,11 +13,7 @@ export default class Home extends React.Component{
           <h1 className="text-center">Mustendance</h1>
         </div>
 
-        <h1 className="text-center">
-          This site is still in development.
-          <br></br>
-          Please hang in there.
-        </h1>
+        <AccountsWidget />
       </div>
     )
   }

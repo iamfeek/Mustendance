@@ -46,6 +46,8 @@ export default class Layout extends React.Component{
         <main className="container">
           {this.props.content()}
         </main>
+
+        <hr />
       </div>
     )
   }

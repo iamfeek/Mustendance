@@ -1,0 +1,19 @@
+#accounts-widget .nav-tabs li{
+  width: 50%;
+}
+
+#accounts-widget .nav-tabs li a{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  color: gray;
+}
+
+#accounts-widget .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, #accounts-widget .nav-tabs > li.active > a:focus{
+  color: #555;
+}
+
+
+#accounts-widget .tab-content{
+  margin-top:15px;
+}
