@@ -48,6 +48,7 @@ export default class Layout extends React.Component{
         </main>
 
         <hr />
+        <p className="text-center">Copyright &copy; 2017</p>
       </div>
     )
   }

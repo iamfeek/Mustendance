@@ -1,0 +1,211 @@
+@media(min-width: 993px){
+  .container{
+    width: 95%;
+  }
+}
+
+button.processing{
+  background-color: grey !important;
+  color: white !important;
+}
+
+.justifyCenter{
+  justify-content: center;
+}
+
+.fullHeight, .full-height{
+  height: calc(100vh - 50px);
+}
+
+.fullWidth, .full-width, .max-width{
+  width: 100%;
+}
+
+/* Borders Section */
+
+.border2{
+  border: 2px solid;
+}
+
+.borderBottomGray{
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.borderTopGray{
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+.borderTop{
+  border-top: 1px solid rgba(0,0,0,0.075);
+}
+
+.borderTop3{
+  border-top: 3px solid;
+  border-radius: 3px;
+}
+
+.borderTop-blue{
+  border-top-color: #1976d2;
+}
+
+.borderTop-red{
+  border-top-color: #ec3e3e;
+}
+
+.borderTop-green{
+  border-top-color: #19d230;
+}
+
+/* End Borders Section*/
+
+.overflowHidden{
+  overflow: hidden;
+}
+
+/* Margins Section */
+.marginZero{
+  margin: 0 !important;
+}
+
+.marginTopZero{
+  margin-top: 0px;
+}
+
+.marginTop5{
+  margin-top: 5px;
+}
+.marginTop10{
+  margin-top: 10px;
+}
+
+.marginTop15{
+  margin-top: 15px;
+}
+
+.marginTop20{
+  margin-top: 20px;
+}
+
+.marginTop40{
+  margin-top: 40px;
+}
+
+.marginRight10{
+  margin-right: 10px;
+}
+
+.marginRight20{
+  margin-right: 20px;
+}
+
+
+.marginBottom20{
+  margin-bottom: 20px;
+}
+
+.marginBottom10{
+  margin-bottom: 10px;
+}
+
+.marginBottomZero{
+  margin-bottom: 0px !important;
+}
+
+.marginLeft10{
+  margin-left: 10px;
+}
+
+.marginLeft65{
+  margin-left: 65px;
+}
+
+/* End Margins*/
+
+/*Padding Section*/
+.paddingZero{
+  padding: 0px !important;
+}
+
+.padding10{
+  padding: 10px !important;
+}
+
+.paddingLeftZero{
+  padding-left: 0px !important;
+}
+
+.paddingLeft10{
+  padding-left: 10px !important;
+}
+
+.paddingTopZero{
+  padding-top: 0px !important;
+}
+
+.paddingTop10{
+  padding-top: 10px !important;
+}
+
+.paddingTop20{
+  padding-top: 20px !important;
+}
+
+.paddingTop5{
+  padding-top: 5px !important;
+}
+
+.padding20{
+  padding: 20px !important
+}
+
+.padding40{
+  padding: 40px !important;
+}
+
+.paddingLeft10{
+  padding-left: 10px;
+}
+
+.paddingLeft20{
+  padding-left: 20px;
+}
+
+.paddingRight20{
+  padding-right: 20px;
+}
+
+.paddingRightZero{
+  padding-right: 0px !important;
+}
+
+.paddingBottom10{
+  padding-bottom: 10px;
+}
+
+.paddingBottom20{
+  padding-bottom: 20px;
+}
+
+.paddingButLeftZero{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.paddingButRightZero{
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.paddingButTopZero{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/*End Padding*/
+
+.centerByMargin{
+  margin: 0 auto;
+}

@@ -17,9 +17,7 @@ export default RegisterForm = props => (
     </div>
 
     <div className="form-group">
-      <div className="col-xs-12 col-md-6 col-md-offset-3">
-        <button type="submit" className="btn btn-default btn-lg" style={{width: "100%"}}>Register</button>
-      </div>
+        <button type="submit" className="btn btn-default btn-lg marginTop15 fullWidth">Register</button>
     </div>
   </form>
 )
