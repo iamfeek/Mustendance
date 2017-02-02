@@ -10,6 +10,7 @@
     "bootstrap-sass": "^3.3.7",
     "meteor-node-stubs": "~0.2.3",
     "react": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-mounter": "^1.2.0"
   }

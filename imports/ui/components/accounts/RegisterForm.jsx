@@ -77,11 +77,11 @@ export default RegisterForm = props => (
 
 const register = e => {
   e.preventDefault();
-  Meteor.call("users.init");
 
   let email = $("#registerEmail").val();
   let password = $("#registerPassword").val();
   let role = document.querySelector('input[name="type"]:checked').id;
+
 
 
   Accounts.createUser({
@@ -90,7 +90,19 @@ const register = e => {
   }, err => {
     if(err){
       Bert.alert(err.reason, "danger", "growl-bottom-left");
-      Meteor.call('users.init', role);
+    }
+
+    if(!err){
+      Meteor.call("users.init", role, err => {
+        if(err){
+          Bert.alert(err.reason, "danger", "growl-bottom-left");
+          Meteor.logout();
+        }
+
+        if(!err){
+          FlowRouter.go('dashboard');
+        }
+      });
     }
   })
 }
