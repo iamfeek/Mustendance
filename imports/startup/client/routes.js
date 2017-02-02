@@ -2,6 +2,7 @@ import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
 
+
 // Import needed templates
 import Layout from '/imports/ui/layouts/Layout';
 import Home from '/imports/ui/pages/home/Home';

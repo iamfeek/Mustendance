@@ -21,6 +21,10 @@ button.processing{
   width: 100%;
 }
 
+.halfWidth, .half-width{
+  width: 50%;
+}
+
 /* Borders Section */
 
 .border2{
