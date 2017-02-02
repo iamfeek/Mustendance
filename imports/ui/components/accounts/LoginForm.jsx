@@ -35,7 +35,15 @@ export default LoginForm = props => (
 
 const login = e => {
   e.preventDefault();
-  console.log("Login")
+  let email = $("#email").val();
+  let password = $("#password").val();
+  Meteor.loginWithPassword(email, password, err => {
+    if(err) Bert.alert(err.reason, "danger", "growl-bottom-left");
+    if(!err){
+      FlowRouter.go("dashboard");
+      Bert.alert("Welcome back!", "info", "fixed-bottom")
+    }
+  })
 }
 
 const validator = () => {

@@ -29,5 +29,6 @@ twbs:bootstrap
 themeteorchef:bert
 accounts-password
 alanning:roles
-msavin:mongol
 session
+react-meteor-data
+msavin:mongol
