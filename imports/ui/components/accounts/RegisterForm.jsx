@@ -93,7 +93,7 @@ const register = e => {
         }
 
         if(!err){
-          FlowRouter.go('dashboard');
+          FlowRouter.go('profile.me');
         }
       });
     }
