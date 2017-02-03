@@ -8,7 +8,7 @@ export default class Home extends React.Component{
 
   render(){
     return(
-      <div id="home" className="col-xs-12">
+      <div id="home">
         <div className="page-header">
           <h1 className="text-center">Mustendance</h1>
         </div>

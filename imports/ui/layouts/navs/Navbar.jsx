@@ -11,7 +11,7 @@ const Navbar = props => (
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href={FlowRouter.path("home")}>
           <img alt="Brand" src="/img/logo_only.png" />
         </a>
       </div>

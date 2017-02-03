@@ -9,9 +9,9 @@ class Profile extends React.Component{
 
   render(){
     if(this.props.loading) return <h1>Loading</h1>
-    
+
     return(
-      <div id="profile" className="col-xs-12 text-center">
+      <div id="profile" className="text-center">
         <div className="page-header">
           <h1>{this.props.self ? "My Profile" : "Another Person's Profile"}</h1>
         </div>
