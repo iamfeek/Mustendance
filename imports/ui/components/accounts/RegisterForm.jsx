@@ -55,20 +55,6 @@ export default RegisterForm = props => (
       <div className="help-block with-errors"></div>
     </div>
 
-    <div className="btn-group fullWidth" data-toggle="buttons">
-      <label>I am a ...</label>
-      <br />
-      <label className="btn btn-default btn-lg active halfWidth">
-        <input type="radio" name="type" id="organiser" autoComplete="off" checked/>
-        Organiser
-      </label>
-
-      <label className="btn btn-default btn-lg halfWidth">
-        <input type="radio" name="type" id="attendee" autoComplete="off" />
-        Attendee
-      </label>
-    </div>
-
     <div className="form-group">
       <button id="registerButton" type="submit" className="btn btn-default btn-lg marginTop15 fullWidth">Register</button>
     </div>
@@ -81,13 +67,18 @@ const register = e => {
 
   let email = $("#registerEmail").val();
   let password = $("#registerPassword").val();
-  let role = document.querySelector('input[name="type"]:checked').id;
 
 
 
   Accounts.createUser({
     email: email,
-    password: password
+    password: password,
+    profile: {
+      fullname: "",
+      age: null,
+      gender: null,
+      status: "I just joined Mustendance! Three cheers for me!"
+    }
   }, err => {
     if(err){
       Bert.alert(err.reason, "danger", "growl-bottom-left");
@@ -95,7 +86,7 @@ const register = e => {
     }
 
     if(!err){
-      Meteor.call("users.init", role, err => {
+      Meteor.call("users.init", err => {
         if(err){
           Bert.alert(err.reason, "danger", "growl-bottom-left");
           Meteor.logout();

@@ -22,10 +22,11 @@ const Navbar = props => (
           {props.user
             ? <li className="dropdown">
             <a href="" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              {props.user.emails[0].address} <span className="caret"></span>
+              {props.user.profile.fullname ? props.user.profile.fullname : props.user.emails[0].address} <span className="caret"></span>
           </a>
           <ul className="dropdown-menu">
-          
+            <li><a href={FlowRouter.path("profile.me")}>My Profile</a></li>
+            <li className="separator"></li>
             <li>
               <a href="" onClick={() => {
                   logout()

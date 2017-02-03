@@ -9,6 +9,8 @@ import Home from '/imports/ui/pages/home/Home';
 import Dashboard from '/imports/ui/pages/Dashboard';
 import NotFound from '/imports/ui/pages/utils/NotFound';
 
+import Profile from '/imports/ui/pages/profile/Profile';
+
 // Set up all routes in the app
 FlowRouter.route("/", {
   name: "home",
@@ -24,6 +26,24 @@ FlowRouter.route("/dashboard", {
   action: () => {
     mount(Layout, {
       content: () => <Dashboard />
+    })
+  }
+});
+
+FlowRouter.route("/profile/me", {
+  name: "profile.me",
+  action: () => {
+    mount(Layout, {
+      content: () => <Profile self={true} />
+    })
+  }
+});
+
+FlowRouter.route("/profile/:id", {
+  name: "profile",
+  action: query => {
+    mount(Layout, {
+      content: () => <Profile self={false} userId={query.id} />
     })
   }
 });

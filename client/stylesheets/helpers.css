@@ -9,6 +9,10 @@ button.processing{
   color: white !important;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .justifyCenter{
   justify-content: center;
 }
@@ -23,6 +27,10 @@ button.processing{
 
 .halfWidth, .half-width{
   width: 50%;
+}
+
+.oneThirdWidth{
+  width: 33.33333333333%;
 }
 
 /* Borders Section */
