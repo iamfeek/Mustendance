@@ -70,13 +70,14 @@ export default RegisterForm = props => (
     </div>
 
     <div className="form-group">
-      <button type="submit" className="btn btn-default btn-lg marginTop15 fullWidth">Register</button>
+      <button id="registerButton" type="submit" className="btn btn-default btn-lg marginTop15 fullWidth">Register</button>
     </div>
   </form>
 )
 
 const register = e => {
   e.preventDefault();
+  processingButton(true);
 
   let email = $("#registerEmail").val();
   let password = $("#registerPassword").val();
@@ -90,6 +91,7 @@ const register = e => {
   }, err => {
     if(err){
       Bert.alert(err.reason, "danger", "growl-bottom-left");
+      processingButton(false);
     }
 
     if(!err){
@@ -105,6 +107,18 @@ const register = e => {
       });
     }
   })
+}
+
+const processingButton = wantToProcess => {
+  let elem = $("#registerButton");
+  if(wantToProcess){
+    elem.attr("disabled", true);
+    elem.text("Processing...");
+  } else {
+    elem.attr("disabled", false);
+    elem.text("Register");
+  }
+
 }
 
 const validator = () => {

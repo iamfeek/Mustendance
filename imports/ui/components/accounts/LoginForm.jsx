@@ -28,22 +28,38 @@ export default LoginForm = props => (
     </div>
 
     <div className="form-group">
-      <button type="submit" className="btn btn-default btn-lg fullWidth marginTop15">Login</button>
+      <button id="loginButton" type="submit" className="btn btn-default btn-lg fullWidth marginTop15">Login</button>
     </div>
   </form>
 )
 
 const login = e => {
   e.preventDefault();
+  processingButton(true);
   let email = $("#email").val();
   let password = $("#password").val();
   Meteor.loginWithPassword(email, password, err => {
-    if(err) Bert.alert(err.reason, "danger", "growl-bottom-left");
+    if(err){
+      Bert.alert(err.reason, "danger", "growl-bottom-left");
+      processingButton(false);
+    }
     if(!err){
       FlowRouter.go("dashboard");
       Bert.alert("Welcome back!", "info", "fixed-bottom")
     }
   })
+}
+
+const processingButton = wantToProcess => {
+  let elem = $("#loginButton");
+  if(wantToProcess){
+    elem.attr("disabled", true);
+    elem.text("Processing...");
+  } else {
+    elem.attr("disabled", false);
+    elem.text("Register");
+  }
+
 }
 
 const validator = () => {
